@@ -2,7 +2,11 @@
     "fields": {
         "serviceRequired": "Service Required",
         "budgetRange": "Budget Range",
-        "projectTimeline": "Project Timeline"
+        "projectTimeline": "Project Timeline",
+        "aiScore": "AI Lead Score",
+        "aiScoreValue": "AI Score (0-100)",
+        "aiRecommendation": "AI Next Action Recommendation",
+        "aiGeneratedPitch": "AI Generated Pitch (WhatsApp/Email)"
     },
     "options": {
         "source": {
@@ -38,6 +42,11 @@
             "2_4_weeks": "2 - 4 weeks",
             "1_3_months": "1 - 3 months",
             "flexible": "Flexible"
+        },
+        "aiScore": {
+            "hot": "🔥 Hot Lead",
+            "warm": "⚡ Warm Lead",
+            "cold": "❄️ Cold Lead"
         }
     }
 }

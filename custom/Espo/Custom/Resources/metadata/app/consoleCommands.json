@@ -1,0 +1,6 @@
+{
+    "aiAnalyzeLeads": {
+        "className": "Espo\\Custom\\Classes\\ConsoleCommands\\AiAnalyzeLeads",
+        "listed": true
+    }
+}

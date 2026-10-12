@@ -52,6 +52,37 @@
                 "flexible"
             ],
             "audited": true
+        },
+        "aiScore": {
+            "type": "enum",
+            "options": [
+                "",
+                "hot",
+                "warm",
+                "cold"
+            ],
+            "style": {
+                "hot": "danger",
+                "warm": "warning",
+                "cold": "info"
+            },
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "aiScoreValue": {
+            "type": "int",
+            "min": 0,
+            "max": 100,
+            "audited": true
+        },
+        "aiRecommendation": {
+            "type": "varchar",
+            "maxLength": 255,
+            "audited": true
+        },
+        "aiGeneratedPitch": {
+            "type": "text",
+            "audited": true
         }
     }
 }

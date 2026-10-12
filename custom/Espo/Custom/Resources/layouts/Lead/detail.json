@@ -9,6 +9,14 @@
         ]
     },
     {
+        "label": "AI Intelligence & Automation",
+        "rows": [
+            [{"name": "aiScore"}, {"name": "aiScoreValue"}],
+            [{"name": "aiRecommendation", "fullWidth": true}],
+            [{"name": "aiGeneratedPitch", "fullWidth": true}]
+        ]
+    },
+    {
         "label": "Project Requirements",
         "rows": [
             [{"name": "serviceRequired"}, {"name": "budgetRange"}],

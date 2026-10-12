@@ -1,10 +1,10 @@
 [
     {"name": "name", "link": true},
+    {"name": "aiScore", "width": 12},
     {"name": "status", "width": 12},
     {"name": "serviceRequired", "width": 18},
-    {"name": "budgetRange", "width": 14},
+    {"name": "phoneNumber", "notSortable": true, "width": 15},
     {"name": "source", "width": 14},
-    {"name": "emailAddress", "notSortable": true, "width": 16},
-    {"name": "phoneNumber", "notSortable": true, "width": 14},
+    {"name": "aiRecommendation", "notSortable": true, "width": 20},
     {"name": "createdAt", "width": 12}
 ]
