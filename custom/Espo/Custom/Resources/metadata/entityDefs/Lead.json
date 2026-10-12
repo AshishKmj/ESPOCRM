@@ -15,6 +15,18 @@
                 "Other"
             ]
         },
+        "industryTemplate": {
+            "type": "enum",
+            "options": [
+                "",
+                "web_agency",
+                "real_estate",
+                "interior_contractor",
+                "professional_services"
+            ],
+            "default": "web_agency",
+            "audited": true
+        },
         "serviceRequired": {
             "type": "enum",
             "options": [
@@ -52,6 +64,12 @@
                 "flexible"
             ],
             "audited": true
+        },
+        "whatsappUrl": {
+            "type": "varchar",
+            "maxLength": 2000,
+            "view": "views/fields/url",
+            "readOnly": true
         },
         "aiScore": {
             "type": "enum",

@@ -14,7 +14,7 @@ class AiAnalyzeLeads implements Command
 
     public function run(Params $params, IO $io): void
     {
-        $io->writeLine("🤖 Starting AI Lead Analysis & Pitch Generation for MaaJanki Web Tech...");
+        $io->writeLine("🤖 Starting AI Lead Analysis & 1-Click WhatsApp Generation for MaaJanki Web Tech...");
 
         $repository = $this->entityManager->getRDBRepository('Lead');
         $leads = $repository->find();
@@ -28,6 +28,7 @@ class AiAnalyzeLeads implements Command
             $doNotCall = $lead->get('doNotCall');
             $description = $lead->get('description') ?: '';
             $descLower = strtolower($description);
+            $phone = $lead->get('phoneNumber') ?: '';
 
             // AI Decision Engine
             if ($doNotCall || $status === 'Dead' || strpos($descLower, 'not interested') !== false || strpos($descLower, 'do not contact') !== false) {
@@ -45,7 +46,7 @@ class AiAnalyzeLeads implements Command
                 $scoreValue = 80;
                 $recommendation = "⚡ SEO & Growth Opportunity: Website exists but lacks search ranking. Pitch Local SEO & Google Top 3 ranking audit.";
                 $pitch = "Namaste! {$accountName} ki website Google search me top par rank nahi kar rahi hai, jisse aapke competitors ko inquiries ja rahi hain. MaaJanki Web Tech aapko ek FREE Local SEO Audit report bhej sakti hai. Kya hum WhatsApp par report share karein? - Ashish Kumar (MaaJanki Web Tech - 9006543913)";
-            } elseif (strpos($descLower, 'website available: no') !== false || strpos($descLower, 'interior designer') !== false) {
+            } elseif (strpos($descLower, 'website available: no') !== false || strpos($descLower, 'interior designer') !== false || $lead->get('serviceRequired') === 'website_dev') {
                 $score = 'hot';
                 $scoreValue = 88;
                 $recommendation = "🔥 High-Ticket Opportunity: Established business with NO website. Pitch modern portfolio website to showcase past projects.";
@@ -62,12 +63,24 @@ class AiAnalyzeLeads implements Command
             $lead->set('aiRecommendation', $recommendation);
             $lead->set('aiGeneratedPitch', $pitch);
 
+            // Populate WhatsApp URL
+            if ($phone) {
+                $digits = preg_replace('/[^0-9]/', '', $phone);
+                if (strlen($digits) === 10) {
+                    $digits = '91' . $digits;
+                }
+                if ($digits) {
+                    $encodedText = rawurlencode($pitch);
+                    $lead->set('whatsappUrl', "https://wa.me/{$digits}?text={$encodedText}");
+                }
+            }
+
             $this->entityManager->saveEntity($lead);
             $processed++;
 
-            $io->writeLine("  -> Processed: {$accountName} | AI Score: {$score} ({$scoreValue})");
+            $io->writeLine("  -> Processed: {$accountName} | Score: {$score} | WhatsApp Generated: " . ($phone ? 'Yes' : 'No'));
         }
 
-        $io->writeLine("✅ Successfully analyzed and enriched {$processed} leads with AI Intelligence!");
+        $io->writeLine("✅ Successfully analyzed {$processed} leads and generated 1-Click WhatsApp links!");
     }
 }

@@ -3,9 +3,9 @@
         "label": "Overview",
         "rows": [
             [{"name": "name"}, {"name": "accountName"}],
-            [{"name": "emailAddress"}, {"name": "phoneNumber"}],
-            [{"name": "title"}, {"name": "website"}],
-            [{"name": "address"}, false]
+            [{"name": "phoneNumber"}, {"name": "whatsappUrl"}],
+            [{"name": "emailAddress"}, {"name": "website"}],
+            [{"name": "industryTemplate"}, {"name": "address"}]
         ]
     },
     {

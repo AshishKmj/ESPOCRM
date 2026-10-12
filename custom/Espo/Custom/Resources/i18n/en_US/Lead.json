@@ -3,6 +3,8 @@
         "serviceRequired": "Service Required",
         "budgetRange": "Budget Range",
         "projectTimeline": "Project Timeline",
+        "whatsappUrl": "💬 1-Click WhatsApp Direct Chat",
+        "industryTemplate": "🏢 Industry Template",
         "aiScore": "AI Lead Score",
         "aiScoreValue": "AI Score (0-100)",
         "aiRecommendation": "AI Next Action Recommendation",
@@ -19,6 +21,12 @@
             "Call": "Phone Call",
             "Email": "Email Inquiry",
             "Other": "Other"
+        },
+        "industryTemplate": {
+            "web_agency": "Web & Software Agency (MaaJanki)",
+            "real_estate": "Real Estate & Properties",
+            "interior_contractor": "Interior Designer & Construction",
+            "professional_services": "Professional Services & Consulting"
         },
         "serviceRequired": {
             "website_dev": "Custom Website Development (Next.js / React)",

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Project Quotation | MaaJanki Web Tech</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
+    body {
+      background: radial-gradient(circle at top right, #1e1b4b, #0f172a 60%, #030712);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      color: #f8fafc;
+    }
+    .card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 36px;
+      width: 100%;
+      max-width: 580px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(99, 102, 241, 0.2);
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      color: #818cf8;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    h2 { font-size: 26px; font-weight: 800; margin-bottom: 8px; color: #fff; }
+    p.sub { font-size: 14px; color: #94a3b8; margin-bottom: 28px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-group { margin-bottom: 16px; }
+    label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: #cbd5e1; }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+      transition: all 0.2s;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #6366f1;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+    }
+    select option { background: #0f172a; color: #fff; }
+    button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #4f46e5, #6366f1);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 20px -5px rgba(79, 70, 229, 0.5);
+      transition: all 0.2s;
+      margin-top: 10px;
+    }
+    button:hover { transform: translateY(-2px); box-shadow: 0 15px 25px -5px rgba(79, 70, 229, 0.6); }
+    .success-box {
+      display: none;
+      text-align: center;
+      padding: 24px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 12px;
+      color: #34d399;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="badge">🚀 Instant Project Quote</div>
+    <h2>MaaJanki Web Tech</h2>
+    <p class="sub">Tell us about your project requirements and receive a fast quote & live demo.</p>
+
+    <div id="successMsg" class="success-box">
+      ✅ Thank you! Your inquiry has been submitted. Our team will contact you on WhatsApp shortly.
+    </div>
+
+    <form id="leadForm">
+      <div class="grid">
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" id="name" required placeholder="e.g. Ramesh Kumar">
+        </div>
+        <div class="form-group">
+          <label>Company / Business Name</label>
+          <input type="text" id="company" placeholder="e.g. Kumar Designs">
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="form-group">
+          <label>WhatsApp Number *</label>
+          <input type="tel" id="phone" required placeholder="e.g. 9876543210">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="email" placeholder="ramesh@example.com">
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="form-group">
+          <label>Service Needed *</label>
+          <select id="service" required>
+            <option value="website_dev">Custom Website (Next.js / React)</option>
+            <option value="software_saas">Software & SaaS Development</option>
+            <option value="ecommerce">E-Commerce Store</option>
+            <option value="seo_marketing">SEO & Google Maps Ranking</option>
+            <option value="ui_ux">UI / UX Design</option>
+            <option value="maintenance">Website Maintenance & AMC</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Estimated Budget</label>
+          <select id="budget">
+            <option value="under_25k">&lt; ₹25,000</option>
+            <option value="25k_to_50k" selected>₹25,000 - ₹50,000</option>
+            <option value="50k_to_100k">₹50,000 - ₹1,00,000</option>
+            <option value="100k_to_300k">₹1,00,000 - ₹3,00,000</option>
+            <option value="above_300k">&gt; ₹3,00,000 / $1,000+</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Project Details / Requirements</label>
+        <textarea id="description" rows="3" placeholder="Tell us about your project goals, required pages, or references..."></textarea>
+      </div>
+
+      <button type="submit" id="submitBtn">Send Inquiry to CRM →</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('leadForm');
+    const successMsg = document.getElementById('successMsg');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Submitting to CRM...';
+
+      const nameVal = document.getElementById('name').value.trim();
+      const parts = nameVal.split(' ');
+      const firstName = parts[0];
+      const lastName = parts.slice(1).join(' ') || parts[0];
+
+      const payload = {
+        firstName: firstName,
+        lastName: lastName,
+        accountName: document.getElementById('company').value.trim() || nameVal,
+        phoneNumber: document.getElementById('phone').value.trim(),
+        emailAddress: document.getElementById('email').value.trim(),
+        serviceRequired: document.getElementById('service').value,
+        budgetRange: document.getElementById('budget').value,
+        source: 'website',
+        description: 'Web Lead Capture Form Submission:\n' + document.getElementById('description').value.trim()
+      };
+
+      try {
+        const res = await fetch('http://localhost:8080/api/v1/Lead', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Basic ' + btoa('admin:admin')
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          successMsg.style.display = 'block';
+        } else {
+          alert('Submission failed. Please check CRM connection.');
+          submitBtn.disabled = false;
+          submitBtn.innerText = 'Send Inquiry to CRM →';
+        }
+      } catch (err) {
+        alert('Error connecting to CRM: ' + err.message);
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Send Inquiry to CRM →';
+      }
+    });
+  </script>
+</body>
+</html>
