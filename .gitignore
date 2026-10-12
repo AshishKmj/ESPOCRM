@@ -1,5 +1,7 @@
 # EspoCRM runtime data
 data/config.php
+data/config-internal.php
+data/state.php
 data/cache/*
 data/logs/*
 data/upload/*
