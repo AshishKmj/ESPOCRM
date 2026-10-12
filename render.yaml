@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: espocrm-app
+    runtime: docker
+    plan: starter # Starter plan or higher allows persistent disk for /data
+    disk:
+      name: espocrm-data
+      mountPath: /var/www/html/data
+      sizeGB: 10
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: espocrm-db
+          property: connectionString
+      - key: ESPOCRM_DATABASE_PLATFORM
+        value: Postgresql
+      - key: ESPOCRM_ADMIN_USERNAME
+        value: admin
+      - key: ESPOCRM_ADMIN_PASSWORD
+        generateValue: true
+
+databases:
+  - name: espocrm-db
+    databaseName: espocrm
+    user: espocrm
+    plan: free # Can be upgraded to starter

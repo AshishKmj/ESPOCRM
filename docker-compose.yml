@@ -1,0 +1,39 @@
+services:
+  espocrm:
+    build: .
+    container_name: espocrm
+    restart: unless-stopped
+    ports:
+      - "8080:10000"
+    environment:
+      - PORT=10000
+      - ESPOCRM_DATABASE_PLATFORM=Postgresql
+      - ESPOCRM_DATABASE_HOST=postgres
+      - ESPOCRM_DATABASE_PORT=5432
+      - ESPOCRM_DATABASE_NAME=espocrm
+      - ESPOCRM_DATABASE_USER=espocrm
+      - ESPOCRM_DATABASE_PASSWORD=espocrm_pass
+      - ESPOCRM_SITE_URL=http://localhost:8080
+      - ESPOCRM_ADMIN_USERNAME=admin
+      - ESPOCRM_ADMIN_PASSWORD=admin
+    volumes:
+      - espocrm_data:/var/www/html/data
+      - espocrm_custom:/var/www/html/custom
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: espocrm-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: espocrm
+      POSTGRES_USER: espocrm
+      POSTGRES_PASSWORD: espocrm_pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  espocrm_data:
+  espocrm_custom:
+  postgres_data:

@@ -1,0 +1,12 @@
+.git
+.github
+.gitignore
+.dockerignore
+docker-compose.yml
+render.yaml
+*.md
+.DS_Store
+Thumbs.db
+data/cache/*
+data/logs/*
+!data/.data

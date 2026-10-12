@@ -1,0 +1,13 @@
+# EspoCRM runtime data
+data/config.php
+data/cache/*
+data/logs/*
+data/upload/*
+!data/.data
+
+# Environment & IDE
+.env
+.env.*
+.idea/
+.vscode/
+*.log
