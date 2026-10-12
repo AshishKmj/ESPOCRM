@@ -1,0 +1,57 @@
+{
+    "fields": {
+        "source": {
+            "type": "enum",
+            "options": [
+                "",
+                "website",
+                "whatsapp",
+                "google_search",
+                "referral",
+                "social_media",
+                "upwork",
+                "Call",
+                "Email",
+                "Other"
+            ]
+        },
+        "serviceRequired": {
+            "type": "enum",
+            "options": [
+                "",
+                "website_dev",
+                "software_saas",
+                "ecommerce",
+                "seo_marketing",
+                "ui_ux",
+                "mobile_app",
+                "maintenance"
+            ],
+            "audited": true
+        },
+        "budgetRange": {
+            "type": "enum",
+            "options": [
+                "",
+                "under_25k",
+                "25k_to_50k",
+                "50k_to_100k",
+                "100k_to_300k",
+                "above_300k"
+            ],
+            "audited": true
+        },
+        "projectTimeline": {
+            "type": "enum",
+            "options": [
+                "",
+                "urgent",
+                "1_2_weeks",
+                "2_4_weeks",
+                "1_3_months",
+                "flexible"
+            ],
+            "audited": true
+        }
+    }
+}

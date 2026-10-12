@@ -1,0 +1,26 @@
+[
+    {
+        "label": "Overview",
+        "rows": [
+            [{"name": "name"}, {"name": "accountName"}],
+            [{"name": "emailAddress"}, {"name": "phoneNumber"}],
+            [{"name": "title"}, {"name": "website"}],
+            [{"name": "address"}, false]
+        ]
+    },
+    {
+        "label": "Project Requirements",
+        "rows": [
+            [{"name": "serviceRequired"}, {"name": "budgetRange"}],
+            [{"name": "projectTimeline"}, {"name": "opportunityAmount"}]
+        ]
+    },
+    {
+        "label": "Details",
+        "rows": [
+            [{"name": "status"}, {"name": "source"}],
+            [{"name": "industry"}, {"name": "campaign"}],
+            [{"name": "description", "fullWidth": true}]
+        ]
+    }
+]

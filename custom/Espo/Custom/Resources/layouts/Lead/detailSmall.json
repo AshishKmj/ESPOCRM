@@ -1,0 +1,25 @@
+[
+    {
+        "label": "",
+        "rows": [
+            [
+                {"name": "name", "fullWidth": true}
+            ],
+            [
+                {"name": "emailAddress"}, {"name": "phoneNumber"}
+            ],
+            [
+                {"name": "serviceRequired"}, {"name": "budgetRange"}
+            ],
+            [
+                {"name": "status"}, {"name": "source"}
+            ],
+            [
+                {"name": "projectTimeline"}, {"name": "opportunityAmount"}
+            ],
+            [
+                {"name": "description", "fullWidth": true}
+            ]
+        ]
+    }
+]

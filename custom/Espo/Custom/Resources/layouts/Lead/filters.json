@@ -1,0 +1,13 @@
+[
+    "assignedUser",
+    "status",
+    "serviceRequired",
+    "budgetRange",
+    "projectTimeline",
+    "source",
+    "createdAt",
+    "accountName",
+    "emailAddress",
+    "phoneNumber",
+    "opportunityAmountConverted"
+]

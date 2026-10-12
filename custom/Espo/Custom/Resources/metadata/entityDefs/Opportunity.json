@@ -1,0 +1,18 @@
+{
+    "fields": {
+        "serviceType": {
+            "type": "enum",
+            "options": [
+                "",
+                "Custom Website Development (Next.js/React)",
+                "Software & SaaS Development",
+                "E-Commerce Store",
+                "SEO & Digital Marketing",
+                "UI/UX Design",
+                "Mobile App Development",
+                "Maintenance & AMC"
+            ],
+            "audited": true
+        }
+    }
+}

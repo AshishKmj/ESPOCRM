@@ -1,0 +1,16 @@
+{
+    "fields": {
+        "serviceType": "Service Type"
+    },
+    "options": {
+        "serviceType": {
+            "Custom Website Development (Next.js/React)": "Custom Website Development (Next.js / React)",
+            "Software & SaaS Development": "Software & SaaS Development",
+            "E-Commerce Store": "E-Commerce Store",
+            "SEO & Digital Marketing": "SEO & Digital Marketing",
+            "UI/UX Design": "UI / UX Design",
+            "Mobile App Development": "Mobile App Development",
+            "Maintenance & AMC": "Maintenance & AMC"
+        }
+    }
+}
