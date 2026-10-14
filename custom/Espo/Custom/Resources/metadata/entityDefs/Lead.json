@@ -1,5 +1,45 @@
 {
     "fields": {
+        "status": {
+            "type": "enum",
+            "options": [
+                "New",
+                "Assigned",
+                "In Process",
+                "Contacted",
+                "Qualified",
+                "Interested",
+                "Meeting Scheduled",
+                "Proposal Sent",
+                "Negotiation",
+                "Converted",
+                "Recycled",
+                "Dead"
+            ],
+            "default": "New",
+            "style": {
+                "New": "default",
+                "Assigned": "primary",
+                "In Process": "warning",
+                "Contacted": "info",
+                "Qualified": "info",
+                "Interested": "primary",
+                "Meeting Scheduled": "primary",
+                "Proposal Sent": "warning",
+                "Negotiation": "warning",
+                "Converted": "success",
+                "Recycled": "info",
+                "Dead": "danger"
+            },
+            "displayAsLabel": true,
+            "labelType": "state",
+            "audited": true,
+            "notActualOptions": [
+                "Converted",
+                "Recycled",
+                "Dead"
+            ]
+        },
         "source": {
             "type": "enum",
             "options": [
@@ -100,6 +140,126 @@
         },
         "aiGeneratedPitch": {
             "type": "text",
+            "audited": true
+        },
+        "lastFollowUpDate": {
+            "type": "datetime",
+            "audited": true
+        },
+        "lastFollowUpMethod": {
+            "type": "enum",
+            "options": [
+                "",
+                "call",
+                "whatsapp",
+                "email",
+                "meeting",
+                "other"
+            ],
+            "audited": true
+        },
+        "lastFollowUpOutcome": {
+            "type": "enum",
+            "options": [
+                "",
+                "connected_interested",
+                "no_answer",
+                "busy_call_later",
+                "callback_requested",
+                "whatsapp_sent",
+                "email_sent",
+                "meeting_scheduled",
+                "proposal_sent",
+                "negotiation",
+                "converted",
+                "not_interested",
+                "invalid_number"
+            ],
+            "audited": true
+        },
+        "conversationNotes": {
+            "type": "text",
+            "audited": true
+        },
+        "nextFollowUpDate": {
+            "type": "datetime",
+            "audited": true,
+            "isIndex": true
+        },
+        "reminderStatus": {
+            "type": "enum",
+            "options": [
+                "",
+                "missing_date",
+                "scheduled",
+                "due_today",
+                "overdue",
+                "completed",
+                "snoozed",
+                "cancelled"
+            ],
+            "default": "missing_date",
+            "style": {
+                "due_today": "warning",
+                "overdue": "danger",
+                "scheduled": "primary",
+                "missing_date": "secondary",
+                "completed": "success",
+                "snoozed": "info",
+                "cancelled": "default"
+            },
+            "displayAsLabel": true,
+            "audited": true,
+            "isIndex": true
+        },
+        "followUpPriority": {
+            "type": "enum",
+            "options": [
+                "",
+                "high",
+                "medium",
+                "low"
+            ],
+            "default": "medium",
+            "style": {
+                "high": "danger",
+                "medium": "warning",
+                "low": "info"
+            },
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "followUpCount": {
+            "type": "int",
+            "default": 0,
+            "audited": true
+        },
+        "missedFollowUpCount": {
+            "type": "int",
+            "default": 0,
+            "audited": true
+        },
+        "lossReason": {
+            "type": "enum",
+            "options": [
+                "",
+                "competitor",
+                "budget_high",
+                "unresponsive",
+                "timing",
+                "not_interested",
+                "abusive",
+                "invalid_contact",
+                "other"
+            ],
+            "audited": true
+        },
+        "convertedAt": {
+            "type": "datetime",
+            "audited": true
+        },
+        "conversionValue": {
+            "type": "currency",
             "audited": true
         }
     }

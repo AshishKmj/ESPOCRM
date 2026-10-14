@@ -9,10 +9,13 @@
                 {"name": "emailAddress"}, {"name": "phoneNumber"}
             ],
             [
-                {"name": "serviceRequired"}, {"name": "budgetRange"}
+                {"name": "status"}, {"name": "source"}
             ],
             [
-                {"name": "status"}, {"name": "source"}
+                {"name": "nextFollowUpDate"}, {"name": "reminderStatus"}
+            ],
+            [
+                {"name": "serviceRequired"}, {"name": "budgetRange"}
             ],
             [
                 {"name": "projectTimeline"}, {"name": "opportunityAmount"}

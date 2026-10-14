@@ -1,13 +1,16 @@
 [
-    "assignedUser",
+    "reminderStatus",
+    "nextFollowUpDate",
+    "lastFollowUpOutcome",
+    "followUpPriority",
     "status",
+    "aiScore",
+    "assignedUser",
+    "source",
     "serviceRequired",
     "budgetRange",
-    "projectTimeline",
-    "source",
+    "lossReason",
     "createdAt",
-    "accountName",
-    "emailAddress",
     "phoneNumber",
-    "opportunityAmountConverted"
+    "emailAddress"
 ]

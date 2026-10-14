@@ -8,7 +8,19 @@
         "aiScore": "AI Lead Score",
         "aiScoreValue": "AI Score (0-100)",
         "aiRecommendation": "AI Next Action Recommendation",
-        "aiGeneratedPitch": "AI Generated Pitch (WhatsApp/Email)"
+        "aiGeneratedPitch": "AI Generated Pitch (WhatsApp/Email)",
+        "lastFollowUpDate": "Last Follow-up Date",
+        "lastFollowUpMethod": "Last Follow-up Method",
+        "lastFollowUpOutcome": "Last Follow-up Outcome",
+        "conversationNotes": "Conversation Notes",
+        "nextFollowUpDate": "Next Follow-up Date & Time",
+        "reminderStatus": "Follow-up Reminder Status",
+        "followUpPriority": "Follow-up Priority",
+        "followUpCount": "Completed Follow-ups",
+        "missedFollowUpCount": "Missed / Overdue Count",
+        "lossReason": "Loss Reason",
+        "convertedAt": "Conversion Date",
+        "conversionValue": "Sales Deal Value"
     },
     "options": {
         "source": {
@@ -55,6 +67,74 @@
             "hot": "🔥 Hot Lead",
             "warm": "⚡ Warm Lead",
             "cold": "❄️ Cold Lead"
+        },
+        "status": {
+            "New": "New Lead",
+            "Assigned": "Assigned",
+            "In Process": "In Process",
+            "Contacted": "Contacted",
+            "Qualified": "Qualified",
+            "Interested": "Interested",
+            "Meeting Scheduled": "Meeting / Demo Scheduled",
+            "Proposal Sent": "Proposal Sent",
+            "Negotiation": "Negotiation",
+            "Converted": "Converted / Won",
+            "Recycled": "Recycled",
+            "Dead": "Lost / Dead"
+        },
+        "lastFollowUpMethod": {
+            "call": "📞 Phone Call",
+            "whatsapp": "💬 WhatsApp",
+            "email": "✉️ Email",
+            "meeting": "👥 Meeting / Video Call",
+            "other": "📝 Other"
+        },
+        "lastFollowUpOutcome": {
+            "connected_interested": "✅ Connected — Interested",
+            "no_answer": "📵 No Answer",
+            "busy_call_later": "⏳ Busy — Call Later",
+            "callback_requested": "🔄 Call Back Requested",
+            "whatsapp_sent": "💬 WhatsApp Sent",
+            "email_sent": "✉️ Email Sent",
+            "meeting_scheduled": "📅 Meeting Scheduled",
+            "proposal_sent": "📄 Proposal Sent",
+            "negotiation": "🤝 Negotiation",
+            "converted": "🎉 Converted",
+            "not_interested": "❌ Not Interested",
+            "invalid_number": "🚫 Invalid / Wrong Number"
+        },
+        "reminderStatus": {
+            "missing_date": "⚠️ Follow-up Date Missing",
+            "due_today": "🔔 Due Today",
+            "overdue": "🚨 Overdue",
+            "scheduled": "📅 Scheduled",
+            "completed": "✅ Completed",
+            "snoozed": "💤 Snoozed",
+            "cancelled": "⏹️ Cancelled"
+        },
+        "followUpPriority": {
+            "high": "🔴 High Priority",
+            "medium": "🟡 Medium Priority",
+            "low": "🟢 Low Priority"
+        },
+        "lossReason": {
+            "competitor": "Lost to Competitor",
+            "budget_high": "Price / Budget Constraint",
+            "unresponsive": "Client Unresponsive / Ghosted",
+            "timing": "Timing Not Right / Postponed",
+            "not_interested": "Not Interested",
+            "abusive": "Abusive / Do Not Contact",
+            "invalid_contact": "Invalid Contact Details",
+            "other": "Other"
         }
+    },
+    "presetFilters": {
+        "todayFollowUps": "🔔 Today's Follow-ups",
+        "overdueFollowUps": "🚨 Overdue Follow-ups",
+        "upcomingFollowUps": "📅 Upcoming Follow-ups",
+        "followUpDateMissing": "⚠️ Follow-up Date Missing",
+        "hotLeads": "🔥 Hot Leads",
+        "noAnswer": "📵 No Answer / Missed",
+        "dead": "Lost / Dead"
     }
 }

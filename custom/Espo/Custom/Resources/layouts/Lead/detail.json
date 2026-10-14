@@ -9,6 +9,16 @@
         ]
     },
     {
+        "label": "⚡ Follow-Up & Reminder Management",
+        "rows": [
+            [{"name": "reminderStatus"}, {"name": "followUpPriority"}],
+            [{"name": "nextFollowUpDate"}, {"name": "lastFollowUpDate"}],
+            [{"name": "lastFollowUpMethod"}, {"name": "lastFollowUpOutcome"}],
+            [{"name": "followUpCount"}, {"name": "missedFollowUpCount"}],
+            [{"name": "conversationNotes", "fullWidth": true}]
+        ]
+    },
+    {
         "label": "AI Intelligence & Automation",
         "rows": [
             [{"name": "aiScore"}, {"name": "aiScoreValue"}],
@@ -17,17 +27,13 @@
         ]
     },
     {
-        "label": "Project Requirements",
-        "rows": [
-            [{"name": "serviceRequired"}, {"name": "budgetRange"}],
-            [{"name": "projectTimeline"}, {"name": "opportunityAmount"}]
-        ]
-    },
-    {
-        "label": "Details",
+        "label": "Sales Pipeline & Deal Value",
         "rows": [
             [{"name": "status"}, {"name": "source"}],
-            [{"name": "industry"}, {"name": "campaign"}],
+            [{"name": "serviceRequired"}, {"name": "budgetRange"}],
+            [{"name": "projectTimeline"}, {"name": "opportunityAmount"}],
+            [{"name": "conversionValue"}, {"name": "convertedAt"}],
+            [{"name": "lossReason"}, {"name": "campaign"}],
             [{"name": "description", "fullWidth": true}]
         ]
     }

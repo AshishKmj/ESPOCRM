@@ -1,0 +1,11 @@
+{
+    "primaryFilterClassNameMap": {
+        "todayFollowUps": "Espo\\Custom\\Classes\\Select\\Lead\\PrimaryFilters\\TodayFollowUps",
+        "overdueFollowUps": "Espo\\Custom\\Classes\\Select\\Lead\\PrimaryFilters\\OverdueFollowUps",
+        "upcomingFollowUps": "Espo\\Custom\\Classes\\Select\\Lead\\PrimaryFilters\\UpcomingFollowUps",
+        "followUpDateMissing": "Espo\\Custom\\Classes\\Select\\Lead\\PrimaryFilters\\FollowUpDateMissing",
+        "hotLeads": "Espo\\Custom\\Classes\\Select\\Lead\\PrimaryFilters\\HotLeads",
+        "noAnswer": "Espo\\Custom\\Classes\\Select\\Lead\\PrimaryFilters\\NoAnswer",
+        "dead": "Espo\\Custom\\Classes\\Select\\Lead\\PrimaryFilters\\Dead"
+    }
+}

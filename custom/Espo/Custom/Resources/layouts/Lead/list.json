@@ -1,10 +1,10 @@
 [
     {"name": "name", "link": true},
-    {"name": "aiScore", "width": 12},
+    {"name": "reminderStatus", "width": 14},
+    {"name": "nextFollowUpDate", "width": 15},
     {"name": "status", "width": 12},
-    {"name": "serviceRequired", "width": 18},
-    {"name": "phoneNumber", "notSortable": true, "width": 15},
-    {"name": "source", "width": 14},
-    {"name": "aiRecommendation", "notSortable": true, "width": 20},
-    {"name": "createdAt", "width": 12}
+    {"name": "aiScore", "width": 11},
+    {"name": "phoneNumber", "notSortable": true, "width": 13},
+    {"name": "lastFollowUpOutcome", "width": 16},
+    {"name": "source", "width": 12}
 ]

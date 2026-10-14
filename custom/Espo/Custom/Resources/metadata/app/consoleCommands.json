@@ -2,5 +2,13 @@
     "aiAnalyzeLeads": {
         "className": "Espo\\Custom\\Classes\\ConsoleCommands\\AiAnalyzeLeads",
         "listed": true
+    },
+    "reconcileFollowUps": {
+        "className": "Espo\\Custom\\Classes\\ConsoleCommands\\ReconcileFollowUps",
+        "listed": true
+    },
+    "processFollowUpReminders": {
+        "className": "Espo\\Custom\\Classes\\ConsoleCommands\\ProcessFollowUpReminders",
+        "listed": true
     }
 }

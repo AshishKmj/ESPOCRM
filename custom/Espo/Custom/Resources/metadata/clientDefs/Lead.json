@@ -1,0 +1,13 @@
+{
+    "filterList": [
+        {"name": "actual"},
+        {"name": "todayFollowUps", "style": "warning"},
+        {"name": "overdueFollowUps", "style": "danger"},
+        {"name": "upcomingFollowUps", "style": "primary"},
+        {"name": "followUpDateMissing", "style": "secondary"},
+        {"name": "hotLeads", "style": "danger"},
+        {"name": "noAnswer", "style": "info"},
+        {"name": "converted", "style": "success"},
+        {"name": "dead", "style": "default"}
+    ]
+}
